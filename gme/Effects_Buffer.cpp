@@ -86,8 +86,9 @@ Effects_Buffer::~Effects_Buffer()
 
 blargg_err_t Effects_Buffer::set_sample_rate( long rate, int msec )
 {
-	try
-	{
+//      NO EXCEPTIONS ARE ENABLED BY DEFAULT
+//	try
+//	{
 		for(int i=0; i<max_voices; i++)
 		{
 			if ( !echo_buf[i].size() )
@@ -100,11 +101,11 @@ blargg_err_t Effects_Buffer::set_sample_rate( long rate, int msec )
 				reverb_buf[i].resize( reverb_size );
 			}
 		}
-	}
-	catch(std::bad_alloc& ba)
-	{
-		return "Out of memory";
-	}
+//	}
+//	catch(std::bad_alloc& ba)
+//	{
+//		return "Out of memory";
+//	}
 
 	for ( int i = 0; i < buf_count; i++ )
 		RETURN_ERR( bufs [i].set_sample_rate( rate, msec ) );
