@@ -1,3 +1,5 @@
+ATTEMPT TO PORT. Doesn't work for now on ESP32
+
 Game_Music_Emu 0.6.2: Game Music Emulators
 ------------------------------------------
 Game_Music_Emu is a collection of video game music file emulators that
